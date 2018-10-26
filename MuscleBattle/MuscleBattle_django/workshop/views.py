@@ -9,3 +9,5 @@ def syumi(request):
     return render(request, 'syumi/index.html')
 def hobby(request):
     return render(request, 'intro/hobby.html')
+def shumi(request):
+    return render(request, 'shumi/index.html')

@@ -7,3 +7,5 @@ def intro(request):
     return render(request, 'intro/index.html')
 def syumi(request):
     return render(request, 'syumi/index.html')
+def hobby(request):
+    return render(request, 'intro/hobby.html')

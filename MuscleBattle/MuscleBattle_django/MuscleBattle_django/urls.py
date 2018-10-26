@@ -1,4 +1,5 @@
-"""MuscleBattle_django URL Configuration
+"""
+MuscleBattle_django URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -19,4 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('keithon/', include('workshop.urls')),
+    path('maeken/', include('workshop.urls')),
+    path('tanaka/', include('workshop.urls')),
+	  path('noan/',include('workshop.urls')),
 ]

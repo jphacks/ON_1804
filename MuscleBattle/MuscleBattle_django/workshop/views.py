@@ -5,3 +5,4 @@ def intro(request):
 
 def syumi(request):
     return render(request, 'intro/syumi.html')
+

@@ -1,0 +1,15 @@
+from django.urls import path
+
+from . import views
+
+# set the application namespace
+# https://docs.djangoproject.com/en/2.0/intro/tutorial03/
+app_name = 'accounts'
+
+urlpatterns = [
+    # ex: /accounts/signup/
+    path('', views.Top.as_view(), name='top'),
+    path('signup/', views.SignUpView.as_view(), name='signup'),
+    path('login/', views.Login.as_view(), name='login'),
+    path('logout/', views.Logout.as_view(), name='logout'),
+]

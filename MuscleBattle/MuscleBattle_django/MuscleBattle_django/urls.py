@@ -1,8 +1,7 @@
-"""
-MuscleBattle_django URL Configuration
 
+"""myblog URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+    https://docs.djangoproject.com/en/2.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -15,15 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path
 
 urlpatterns = [
+    # https://docs.djangoproject.com/en/2.0/topics/auth/default/#module-django.contrib.auth.views
+    path('', include('app.urls')),
+    path('accounts/', include('app.urls')),
     path('admin/', admin.site.urls),
-    #izumikawaがきたらworkshop.urlsを起動するぜ
-    path('izumikawa/',include('workshop.urls')),
-    path('keithon/', include('workshop.urls')),
-    path('maeken/', include('workshop.urls')),
-    path('tanaka/', include('workshop.urls')),
-	  path('noan/',include('workshop.urls')),
+    path('home/', include('home.urls')),
+    path('ranking/', include('ranking.urls')),
+    path('user/', include('user.urls')),
     path('streaming/', include('streaming.urls'))
 ]

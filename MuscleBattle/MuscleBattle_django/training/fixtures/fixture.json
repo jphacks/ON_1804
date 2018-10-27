@@ -7,7 +7,32 @@
         "times_number": 20,
         "sets_number": 5,
         "times_type": 0,
-        "week": 1
+        "week1": 1,
+        "week2": 4
+      }
+    },
+    {
+      "model": "training.TrainingMenu",
+      "pk": 2,
+      "fields": {
+        "training_name": "ブルガリアンスクワット",
+        "times_number": 10,
+        "sets_number": 8,
+        "times_type": 0,
+        "week1": 1,
+        "week2": 4
+      }
+    },
+    {
+      "model": "training.TrainingMenu",
+      "pk": 3,
+      "fields": {
+        "training_name": "バックキック",
+        "times_number": 20,
+        "sets_number": 3,
+        "times_type": 0,
+        "week1": 1,
+        "week2": 4
       }
     }
   ]

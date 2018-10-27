@@ -115,4 +115,4 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # './static'
 
 # Auth
 # https://docs.djangoproject.com/en/2.0/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/home/'

@@ -39,7 +39,13 @@
     "updateLatest": "./scripts/updateLatest.sh",
     "validate": "npm ls",
     "test-page": "echo \"open https://0.0.0.0:8443/test/\" && stupid-server -s -h 0.0.0.0",
-    "test": "node test/selenium/index.js"
+    "test": "node test/selenium/index.js",
+    "lint": "jshint ."
   },
-  "false": {}
+  "false": {},
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
 }

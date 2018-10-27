@@ -25,4 +25,6 @@ urlpatterns = [
     path('maeken/', include('workshop.urls')),
     path('tanaka/', include('workshop.urls')),
 	  path('noan/',include('workshop.urls')),
+    path('shigenius/',include('workshop.urls')),
 ]
+

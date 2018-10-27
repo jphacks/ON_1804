@@ -1,4 +1,6 @@
 {% extends "regstration/base.html" %}
 {% block content %}
-<p>ここに、好きな内容を入れる。</p>
+<a href = "{%url 'accounts:login' %}"> ログインするよ。</a><p>
+<a href = "{%url 'accounts:signup' %}"> 登録するよ。</a>
+<p></p>
 {% endblock %}

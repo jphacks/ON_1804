@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sslserver'
 ]
 
 MIDDLEWARE = [
@@ -116,3 +117,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # './static'
 # Auth
 # https://docs.djangoproject.com/en/2.0/ref/settings/#login-redirect-url
 LOGIN_REDIRECT_URL = '/'
+
+# HTTPS redirect
+SECURE_SSL_REDIRECT = True

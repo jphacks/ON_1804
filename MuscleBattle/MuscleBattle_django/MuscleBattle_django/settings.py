@@ -25,12 +25,13 @@ SECRET_KEY = 'pntl4=1ck!u&%*7i5tyvw0l@yc&t3+q!p(!0(8p2g8h*6m(@)s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.10.12.222', '0.0.0.0', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'streaming.apps.StreamingConfig',
     'workshop.apps.WorkshopConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -118,4 +119,35 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+
+# Fetch Django's project directory
+# #
+# import os
+# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+# STATIC_ROOT = os.path.join(BASE_DIR, 'deploy')  # プロジェクト直下のdeployディレクトリ
+# STATIC_URL = '/static/'  # 配信用のURL
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),  # プロジェクト直下のstaticディレクトリを指定
+# )
+
+# DJANGO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# # Fetch the project_root
+# PROJECT_ROOT = os.path.dirname(DJANGO_ROOT)
+# STREAMING_ROOT =os.path.join(DJANGO_ROOT, 'streaming')
+# STATIC_ROOT = os.path.join(STREAMING_ROOT, 'static')# /path/to/project_directory/static
+
+# # NPM
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     # 'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+# #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+#     'npm.finders.NpmFinder'
+# )
+#
+# NPM_ROOT_PATH =
+
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'node_modules'),
+]

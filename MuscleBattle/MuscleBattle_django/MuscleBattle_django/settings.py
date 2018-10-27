@@ -26,9 +26,10 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'app.apps.AppConfig',
     'home.apps.HomeConfig',
     'ranking.apps.RankingConfig',
+    'app.apps.AppConfig',
+    'user.apps.UserConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -114,9 +115,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # './static'
 
+LOGIN_REDIRECT_URL = '/home/'
+
 # Auth
 # https://docs.djangoproject.com/en/2.0/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = '/'
 
 # HTTPS redirect, and more
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') #{追加}

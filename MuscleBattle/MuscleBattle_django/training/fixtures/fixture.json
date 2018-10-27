@@ -1,0 +1,14 @@
+[
+    {
+      "model": "training.TrainingMenu",
+      "pk": 1,
+      "fields": {
+        "training_name": "スクワット",
+        "times_number": 20,
+        "sets_number": 5,
+        "times_type": 0,
+        "week": 1
+      }
+    }
+  ]
+  

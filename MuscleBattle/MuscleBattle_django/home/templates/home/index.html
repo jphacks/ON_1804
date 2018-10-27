@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,11 +55,11 @@
 </head>
 <body>
 <div class = "body">
-    <img src="../../../../image/home_2.jpg">
+    <img src="{% static 'home/home_2.jpg' %}">
     <a id="user" href="#">ユーザー情報</a><br>
     <a id ="do_muscle" href="#">筋トレを<br>する</a><br>
     <a id ="view" href="#">筋トレを<br>見る</a><br>
-    <a id = "ranking" href="#">ランキング</a><br>
+    <a id = "ranking" href="{% url 'ranking:ranking' %}">ランキング</a><br>
 </div>
 </body>
 </html>

@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sslserver'
 ]
 
 MIDDLEWARE = [
@@ -114,6 +115,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # './static'
 
+LOGIN_REDIRECT_URL = '/home/'
+
 # Auth
 # https://docs.djangoproject.com/en/2.0/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = '/home/'
+
+# HTTPS redirect, and more
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') #{追加}
+SECURE_SSL_REDIRECT = True#{追加}
+SESSION_COOKIE_SECURE = True#{追加}
+CSRF_COOKIE_SECURE = True#{追加}

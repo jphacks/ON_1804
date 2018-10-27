@@ -5,6 +5,7 @@ from django.contrib.auth.views import (
     LoginView, LogoutView
 )
 from .forms import LoginForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class SignUpView(generic.CreateView):
@@ -16,3 +17,10 @@ class Login(LoginView):
     """ログインページ"""
     form_class = LoginForm
     template_name = 'regstration/login.html'
+
+class Top(generic.TemplateView):
+    template_name = 'regstration/top.html'
+
+class Logout(LoginRequiredMixin, LogoutView):
+    """ログアウトページ"""
+    template_name = 'regstration/top.html'

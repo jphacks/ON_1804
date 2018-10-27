@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'ranking.apps.RankingConfig',
     'app.apps.AppConfig',
     'user.apps.UserConfig',
+    'streaming.apps.StreamingConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -112,8 +113,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # './static'
 
 LOGIN_REDIRECT_URL = '/home/'
 
@@ -125,3 +124,11 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') #{追加}
 SECURE_SSL_REDIRECT = True#{追加}
 SESSION_COOKIE_SECURE = True#{追加}
 CSRF_COOKIE_SECURE = True#{追加}
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'node_modules'),
+]

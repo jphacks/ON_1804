@@ -24,5 +24,5 @@ urlpatterns = [
     path('keithon/', include('workshop.urls')),
     path('maeken/', include('workshop.urls')),
     path('tanaka/', include('workshop.urls')),
-	  path('noan/',include('workshop.urls')),
+    path('home/', include('home.urls'))
 ]

@@ -118,5 +118,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # './static'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#login-redirect-url
 LOGIN_REDIRECT_URL = '/'
 
-# HTTPS redirect
-SECURE_SSL_REDIRECT = True
+# HTTPS redirect, and more
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') #{追加}
+SECURE_SSL_REDIRECT = True#{追加}
+SESSION_COOKIE_SECURE = True#{追加}
+CSRF_COOKIE_SECURE = True#{追加}

@@ -19,10 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #izumikawaがきたらworkshop.urlsを起動するぜ
-    path('izumikawa/',include('workshop.urls')),
-    path('keithon/', include('workshop.urls')),
-    path('maeken/', include('workshop.urls')),
-    path('tanaka/', include('workshop.urls')),
-    path('home/', include('home.urls'))
+    path('home/', include('home.urls')),
 ]

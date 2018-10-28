@@ -1,6 +1,52 @@
 {% extends "regstration/base.html" %}
+{% load static %}
 {% block content %}
-<a href = "{%url 'accounts:login' %}"> ログインするよ。</a><p>
-<a href = "{%url 'accounts:signup' %}"> 登録するよ。</a>
-<p></p>
+
+<style type="text/css">
+.main{
+  width: 1242px;
+  height: 2208px;
+}
+
+.login{
+  float: left;
+  width: 40%;
+}
+
+.login{
+  float:left;
+  width:50%;
+}
+
+.login-icon{
+  position:relative;
+}
+
+.login-icon a{
+  position:absolute;
+  top:50%;
+  font-size: 50px;
+  left:25%;
+  color:white;
+}
+
+</style>
+<div class="main">
+  <img src="{% static 'app/zakoogo_2.jpg' %}" width="1200px">
+  <div class="login">
+    <div class="login-icon">
+      <img id="login_img" src="{% static 'app/666.png' %}" width=500px;>
+      <a id="login" href = "{%url 'accounts:login' %}"> ログイン</a>
+    </div>
+  </div>
+
+  <div class="login">
+    <div class="login-icon">
+      <img id="signup_img" src="{% static 'app/666.png' %}" width=500px;>
+      <a id="signyo" href = "{%url 'accounts:signup' %}"> 登録</a>
+    </div>
+  </div>
+</center>
+</div>
+
 {% endblock %}

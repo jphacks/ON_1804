@@ -19,13 +19,68 @@
             position:relative;
         }
 
+        #user{
+            top:100px;
+            left:10px;
+        }
+
+        #do_muscle{
+            top:1300px;
+            left:450px;
+            text-align:center;
+        }
+
+        #view{
+            top:900px;
+            left:30px;
+            text-align:center;
+        }
+
+        #ranking{
+            top:1850px;
+            left:70px;
+            font-size:80px;
+        }
+        ul, ol{
+        padding: 0;
+        }
+
+        ul li {
+        position: relative;
+        list-style-type: none!important;/*ポチ消す*/
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        margin-bottom: 5px;
+        line-height: 1.5;
+        background: #dbebf8;
+        vertical-align: middle;
+        color: #505050;
+        border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
+        }
+
+        ul li:before{ /*疑似要素*/
+        display:inline-block; 
+        vertical-align: middle;
+        /*以下白丸つくる*/
+        content:'';
+        width:1em;
+        height: 1em;
+        background: #fff;
+        border-radius: 50%;
+        margin-right: 8px;
+        }
+        #ranking{
+            top:1850px;
+            left:70px;
+            font-size:80px;
+        }
     </style>
 </head>
 <body>
 <div class = "body">
-
-<a href="{% url 'streaming:start_streaming' %}?{{hash_n}}">ジムを作る</a>
-<a href="{% url 'streaming:list_streaming' %}">ジムに入る</a>
+<ul>
+<a id="ranking" href="{% url 'streaming:start_streaming' %}?{{hash_n}}"><li>ジムを作る</li></a>
+<a id="ranking" href="{% url 'streaming:list_streaming' %}"><li>ジムに入る</li></a>
+</ul>
 </div>
 </body>
 </html>

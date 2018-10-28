@@ -51,6 +51,11 @@
             left:70px;
             font-size:80px;
         }
+        #logo{
+          position: absolute;
+          top:500px;
+          left:500px;
+        }
 
     </style>
 </head>
@@ -61,7 +66,8 @@
     <a id="view" href="#"><img src="{% static 'home/watch.png' %}"  width="350px"></a>
     <a id="ranking" href="{% url 'ranking:ranking' %}"><img src="{% static 'home/ranking.png' %}"　 width="400px"></a>
     {% now "w" as current_week %}
-    <a id ="do_muscle" href="{% url 'training:menu' current_week %}"><img src="{% static 'home/start.png' %}"  width="500px"></a><br>
+    <a id ="do_muscle" href="{% url 'training:menu' current_week %}"><img src="{% static 'home/start.png' %}"  width="500px"></a>
+    <img width="700px" id="logo" src="{% static 'home/zakoogo_2.jpg' %}">
 
 </div>
 </body>

@@ -1,15 +1,94 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>menu</title>
+    <title>home</title>
+    <style type="text/css">
+        p {
+            color: red;
+        }
+        #body {
+            margin-right: auto;
+            margin-left: auto;
+            width: 1242px;
+            height: 2208px;
+            background-color: orange;
+        }
+        .body img{
+            position:relative;
+        }
+        .body a{
+            color:white;
+            position:absolute;
+            text-decoration:none;
+            font-size:100px;
+        }
+        .body a:visited{
+        color:silver
+        }
+
+        #user{
+            top:100px;
+            left:10px;
+        }
+
+        #do_muscle{
+            top:1300px;
+            left:450px;
+            text-align:center;
+        }
+
+        #view{
+            top:900px;
+            left:30px;
+            text-align:center;
+        }
+
+        #ranking{
+            top:1850px;
+            left:70px;
+            font-size:80px;
+        }
+        ul, ol{
+        padding: 0;
+        }
+
+        ul li {
+        position: relative;
+        list-style-type: none!important;/*ポチ消す*/
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        margin-bottom: 5px;
+        line-height: 1.5;
+        background: #dbebf8;
+        vertical-align: middle;
+        color: #505050;
+        border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
+        }
+
+        ul li:before{ /*疑似要素*/
+        display:inline-block; 
+        vertical-align: middle;
+        /*以下白丸つくる*/
+        content:'';
+        width:1em;
+        height: 1em;
+        background: #fff;
+        border-radius: 50%;
+        margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
-{% for menu in training_menu %}
-    {{ menu.training_name }}<br>
-    {{ menu.times_number }}<br>
-    {{ menu.sets_number }}<br>
-    {{ menu.times_type }}<br>
-{% endfor %}
+<div class = "body">
+<ul>
+    {% for menu in training_menu %}
+        <li>
+        {{ menu.training_name }}<br>
+        {{ menu.times_number }} {{ menu.times_type }} | {{ menu.sets_number }}セット
+        </li>
+    {% endfor %}
+    </ul>
+</div>
 </body>
 </html>

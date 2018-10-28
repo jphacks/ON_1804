@@ -68,18 +68,19 @@
         border-radius: 50%;
         margin-right: 8px;
         }
+        #ranking{
+            top:1850px;
+            left:70px;
+            font-size:80px;
+        }
     </style>
 </head>
 <body>
 <div class = "body">
 <ul>
-    {% for menu in training_menu %}
-        <a id="ranking" href="{% url 'training:select' %}"><li>
-        {{ menu.training_name }}<br>
-        {{ menu.times_number }} {{ menu.times_type }} | {{ menu.sets_number }}セット
-        </li></a>
-    {% endfor %}
-    </ul>
+<a id="ranking" href="{% url 'streaming:start_streaming' %}?{{hash_n}}"><li>ジムを作る</li></a>
+<a id="ranking" href="{% url 'streaming:list_streaming' %}"><li>ジムに入る</li></a>
+</ul>
 </div>
 </body>
 </html>

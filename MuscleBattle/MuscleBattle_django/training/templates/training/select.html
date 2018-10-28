@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    <style type="text/css">
+        p {
+            color: red;
+        }
+        #body {
+            margin-right: auto;
+            margin-left: auto;
+            width: 1242px;
+            height: 2208px;
+            background-color: orange;
+        }
+        .body img{
+            position:relative;
+        }
+
+    </style>
+</head>
+<body>
+<div class = "body">
+
+<a href="{% url 'streaming:start_streaming' %}?{{hash_n}}">ジムを作る</a>
+<a href="{% url 'streaming:list_streaming' %}">ジムに入る</a>
+</div>
+</body>
+</html>

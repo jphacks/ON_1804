@@ -1,7 +1,153 @@
 [
-    {
+    /*{
       "model": "training.TrainingMenu",
       "pk": 1,
+      "fields": {
+        "training_name": "フロントブリッジ",
+        "times_number": 1,
+        "sets_number": 3,
+        "times_type": "分間",
+        "week1": ,
+        "week2":
+      }
+    },*/
+    /*{
+      "model": "training.TrainingMenu",
+      "pk": 2,
+      "fields": {
+        "training_name": "プランクレッグレイズ",
+        "times_number": 10,
+        "sets_number": 3,
+        "times_type": "回",
+        "week1": 1,
+        "week2": 0
+      }
+    },*/
+    /*{
+      "model": "training.TrainingMenu",
+      "pk": 3,
+      "fields": {
+        "training_name": "ノーマルプッシュアップ",
+        "times_number": 20,
+        "sets_number": 3,
+        "times_type": "回",
+        "week1": ,
+        "week2":
+      }
+    },*/
+    {
+      "model": "training.TrainingMenu",
+      "pk": 4,
+      "fields": {
+        "training_name": "クランチ",
+        "times_number": 20,
+        "sets_number": 3,
+        "times_type": "回",
+        "week1": 3,
+        "week2": 6
+      }
+    },
+    {
+      "model": "training.TrainingMenu",
+      "pk": 5,
+      "fields": {
+        "training_name": "ナロープッシュアップ",
+        "times_number": 10,
+        "sets_number": 3,
+        "times_type": "回",
+        "week1": 2,
+        "week2": 5
+      }
+    },
+    {
+      "model": "training.TrainingMenu",
+      "pk": 6,
+      "fields": {
+        "training_name": "デクラインプッシュアップ",
+        "times_number": 20,
+        "sets_number": 3,
+        "times_type": "回",
+        "week1": 2,
+        "week2": 5
+      }
+    },
+    {
+      "model": "training.TrainingMenu",
+      "pk": 7,
+      "fields": {
+        "training_name": "リバースプッシュアップ",
+        "times_number": 15,
+        "sets_number": 3,
+        "times_type": "回",
+        "week1": 2,
+        "week2": 5
+      }
+    },
+    {
+      "model": "training.TrainingMenu",
+      "pk": 8,
+      "fields": {
+        "training_name": "スクワット",
+        "times_number": 20,
+        "sets_number": 5,
+        "times_type": "回",
+        "week1": 1,
+        "week2": 4
+      }
+    },
+    {
+      "model": "training.TrainingMenu",
+      "pk": 9,
+      "fields": {
+        "training_name": "ブルガリアンスクワット",
+        "times_number": 10,
+        "sets_number": 8,
+        "times_type": "回",
+        "week1": 1,
+        "week2": 4
+      }
+    },
+    /*{
+      "model": "training.TrainingMenu",
+      "pk": 10,
+      "fields": {
+        "training_name": "懸垂",
+        "times_number": 10,
+        "sets_number": ,
+        "times_type": "回",
+        "week1": ,
+        "week2":
+      }
+    },*/
+    /*{
+      "model": "training.TrainingMenu",
+      "pk": 11,
+      "fields": {
+        "training_name": "ヒップリフト",
+        "times_number": 30,
+        "sets_number": 5,
+        "times_type": "秒",
+        "week1": ,
+        "week2":
+      }
+    },*/
+    {
+      "model": "training.TrainingMenu",
+      "pk": 12,
+      "fields": {
+        "training_name": "バックキック",
+        "times_number": 20,
+        "sets_number": 3,
+        "times_type": "回",
+        "week1": 1,
+        "week2": 4
+      }
+    },
+
+
+    {
+      "model": "training.TrainingMenu",
+      "pk": 14,
       "fields": {
         "training_name": "スクワット",
         "times_number": 20,
@@ -13,7 +159,7 @@
     },
     {
       "model": "training.TrainingMenu",
-      "pk": 2,
+      "pk": 15,
       "fields": {
         "training_name": "ブルガリアンスクワット",
         "times_number": 10,
@@ -25,7 +171,7 @@
     },
     {
       "model": "training.TrainingMenu",
-      "pk": 3,
+      "pk": 16,
       "fields": {
         "training_name": "バックキック",
         "times_number": 20,

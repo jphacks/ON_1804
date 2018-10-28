@@ -24,5 +24,6 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('ranking/', include('ranking.urls')),
     path('user/', include('user.urls')),
-    path('streaming/', include('streaming.urls'))
+    path('streaming/', include('streaming.urls')),
+    path('training/', include('training.urls')),
 ]

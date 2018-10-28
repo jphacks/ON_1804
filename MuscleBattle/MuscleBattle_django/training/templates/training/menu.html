@@ -50,17 +50,45 @@
             left:70px;
             font-size:80px;
         }
+        ul, ol{
+        padding: 0;
+        }
 
+        ul li {
+        position: relative;
+        list-style-type: none!important;/*ポチ消す*/
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        margin-bottom: 5px;
+        line-height: 1.5;
+        background: #dbebf8;
+        vertical-align: middle;
+        color: #505050;
+        border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
+        }
+
+        ul li:before{ /*疑似要素*/
+        display:inline-block; 
+        vertical-align: middle;
+        /*以下白丸つくる*/
+        content:'';
+        width:1em;
+        height: 1em;
+        background: #fff;
+        border-radius: 50%;
+        margin-right: 8px;
+        }
     </style>
 </head>
 <body>
 <div class = "body">
-    <img src="{% static 'home/home_2.jpg' %}">
-    <a id="user" href="#">ユーザー情報</a><br>
-    {% now "w" as current_week %}
-    <a id ="do_muscle" href="{% url 'training:menu' current_week %}">筋トレを<br>する</a><br>
-    <a id ="view" href="#">筋トレを<br>見る</a><br>
-    <a id = "ranking" href="{% url 'ranking:ranking' %}">ランキング</a><br>
+<ul>
+    {% for menu in training_menu %}
+        <li>
+        {{ menu.training_name }}<br>
+        {{ menu.times_number }} {{ menu.times_type }} | {{ menu.sets_number }}セット
+        </li>
+    {% endfor %}
+    </ul>
 </div>
 </body>
 </html>

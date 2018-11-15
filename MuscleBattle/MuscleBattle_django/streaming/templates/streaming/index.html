@@ -10,8 +10,9 @@
             #body {
                 margin-right: auto;
                 margin-left: auto;
-                width: 1242px;
-                height: 2208px;
+                /* width: 1242px; */
+                /* height: 2208px; */
+                 height: 100%;
                 background-color: orange;
             }
             .body img{
@@ -69,7 +70,7 @@
               <input id="sessionInput"/>
               <button type="submit">Create it!</button>
           </form> -->
-          <div class="videoContainer" style="top: 950px; left: 430px">
+          <div class="videoContainer" style="top: 950px; left: 431px">
               <video id="localVideo" oncontextmenu="return false;"></video>
               <div id="localVolume" class="volume_bar"></div>
           </div>
@@ -91,7 +92,7 @@
                   detectSpeakingEvents: true
               });
 
-              var existence_list = [null, null, null, null]
+              var existence_list = [null, null, null, null] //最大5人
 
               // when it's ready, join if we got a room from the URL
               webrtc.on('readyToCall', function () {
@@ -132,6 +133,7 @@
                       var d = document.createElement('div');
                       d.className = 'videoContainer';
                       d.id = 'container_' + webrtc.getDomId(peer);
+                      existence_list[container_idx] = d.id
                       d.appendChild(video);
                       // d.style.top = container_idx*200 + 'px';
                       // d.style.left = container_idx*200 + 'px';
@@ -140,9 +142,21 @@
                         d.style.top = 400 + 'px';
                         d.style.left = 230+ 'px';
                       }
-                      if (container_idx == 1){
+                      else if (container_idx == 1){
                         d.style.top = 400 + 'px';
                         d.style.left = 640+ 'px';
+                      }
+                      else if (container_idx == 2){
+                        d.style.top = 950 + 'px';
+                        d.style.left = 25+ 'px';
+                      }
+                      else if (container_idx == 3){
+                        d.style.top = 950 + 'px';
+                        d.style.left = 840+ 'px';
+                      }
+                      else{
+                        d.style.top = 950 + 'px';
+                        d.style.left = 840+ 'px';
                       }
 
                       var vol = document.createElement('div');
@@ -157,11 +171,9 @@
                       // video.style.left = 200 + 'px'
                       d.appendChild(vol);
                       remotes.appendChild(d);
-
-                      existence_list[container_idx] = d.id
-
                   }
-                  console.log(remotes)
+                  // console.log(remotes)
+                  // console.log(existence_list);
 
               });
               webrtc.on('videoRemoved', function (video, peer) {
@@ -170,17 +182,18 @@
                   var el = document.getElementById('container_' + webrtc.getDomId(peer));
                   if (remotes && el) {
                       remotes.removeChild(el);
+                      // console.log("el", el);
+                      // console.log('container_' + webrtc.getDomId(peer))
 
-                      var container_idx = -1
+                      var peer_idx = -1
                       for(var i=0,l=existence_list.length;i<l;i++){
-                        if (existence_list[i] == el){
-                            container_idx = existence_list[i]
-                            existence_list[container_idx] = null
+                        if (existence_list[i] == el.id){
+                            existence_list[i] = null
+                            break
                         }
                       }
-
-
                   }
+                  // console.log(existence_list);
               });
               webrtc.on('volumeChange', function (volume, treshold) {
                   //console.log('own volume', volume);

@@ -22,6 +22,7 @@ npm run test-page
 
 ### django
 https://www.anaconda.com/download/ からpython3系のやつをinstall
+
 httpsで通信するので証明書(localで試すならオレオレでもok)を `/usr/local/etc/openssl/certs/` 辺りに置いておく
 
 ```

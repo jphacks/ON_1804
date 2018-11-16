@@ -1,40 +1,4 @@
 [
-    /*{
-      "model": "training.TrainingMenu",
-      "pk": 1,
-      "fields": {
-        "training_name": "フロントブリッジ",
-        "times_number": 1,
-        "sets_number": 3,
-        "times_type": "分間",
-        "week1": ,
-        "week2":
-      }
-    },*/
-    /*{
-      "model": "training.TrainingMenu",
-      "pk": 2,
-      "fields": {
-        "training_name": "プランクレッグレイズ",
-        "times_number": 10,
-        "sets_number": 3,
-        "times_type": "回",
-        "week1": 1,
-        "week2": 0
-      }
-    },*/
-    /*{
-      "model": "training.TrainingMenu",
-      "pk": 3,
-      "fields": {
-        "training_name": "ノーマルプッシュアップ",
-        "times_number": 20,
-        "sets_number": 3,
-        "times_type": "回",
-        "week1": ,
-        "week2":
-      }
-    },*/
     {
       "model": "training.TrainingMenu",
       "pk": 4,
@@ -107,30 +71,6 @@
         "week2": 4
       }
     },
-    /*{
-      "model": "training.TrainingMenu",
-      "pk": 10,
-      "fields": {
-        "training_name": "懸垂",
-        "times_number": 10,
-        "sets_number": ,
-        "times_type": "回",
-        "week1": ,
-        "week2":
-      }
-    },*/
-    /*{
-      "model": "training.TrainingMenu",
-      "pk": 11,
-      "fields": {
-        "training_name": "ヒップリフト",
-        "times_number": 30,
-        "sets_number": 5,
-        "times_type": "秒",
-        "week1": ,
-        "week2":
-      }
-    },*/
     {
       "model": "training.TrainingMenu",
       "pk": 12,

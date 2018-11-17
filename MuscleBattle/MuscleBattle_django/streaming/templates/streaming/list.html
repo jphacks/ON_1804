@@ -8,6 +8,10 @@
         p {
             color: red;
         }
+        body {
+            background-color: black;
+        }
+
         #body {
             margin-right: auto;
             margin-left: auto;
@@ -25,27 +29,28 @@
         padding: 0.5em 0.5em 0.5em 0.5em;
         margin-bottom: 5px;
         line-height: 1.5;
-        background: #dbebf8;
+        background: #486994;
         vertical-align: middle;
-        color: #505050;
+        color: #EEBC2D;
         border-radius: 15px 0px 0px 15px;/*左側の角丸く*/
         }
 
         ul li:before{ /*疑似要素*/
         display:inline-block; 
+        width: 100px;/*画像の幅*/
+        height: 100px;/*画像の高さ*/
+        content: '';
+        background-image: url('{% static "streaming/666trimming.png" %}');
+        background-repeat: no-repeat;
+        background-size: contain;
         vertical-align: middle;
-        /*以下白丸つくる*/
-        content:'';
-        width:1em;
-        height: 1em;
-        background: #fff;
-        border-radius: 50%;
-        margin-right: 8px;
+        margin-left: 10px;
         }
-                #ranking{
+        #ranking{
             top:1850px;
             left:70px;
             font-size:80px;
+            text-decoration: none;
         }
     </style>
 </head>
